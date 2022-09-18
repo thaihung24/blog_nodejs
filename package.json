@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
-    "beautiful":"lint-staged"
+    "beautiful": "prettier --single-quote --trailing-comma all --tab-width 4 --write 'src/**/*{js,json,scss}'"
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,13 @@
     "url": "https://github.com/thaihung24/blog_nodejs/issues"
   },
   "homepage": "https://github.com/thaihung24/blog_nodejs#readme",
-  "lint-staged": {
-    "src/**/*{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
-  },
   "husky": {
     "hooks": {
-      "pre-commit":"prettier --single-quote --trailing-comma all --tab-width 4 --write 'src/**/*.{js,json,scss}"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
   "dependencies": {
     "axios": "^0.27.2",
