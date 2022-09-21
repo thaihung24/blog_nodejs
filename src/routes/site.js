@@ -4,6 +4,6 @@ const siteController = require('../app/controllers/SiteController');
 
 // newsController.index
 
-router.use('/search', siteController.search);
-router.use('/', siteController.index);
+router.get('/search', siteController.search);
+router.get('/', siteController.index);
 module.exports = router;
