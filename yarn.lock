@@ -1723,6 +1723,11 @@
   optionalDependencies:
     "saslprep" "^1.0.3"
 
+"mongoose-delete@^0.5.4":
+  "integrity" "sha512-zKkcWFEwTneVG4Oiy+qJRJPFCiGlqOJToHeU3a3meJybWsHCnWxdHkGEkFWNY5cmYEv5av3WwByOhPlQ6I+FmQ=="
+  "resolved" "https://registry.npmjs.org/mongoose-delete/-/mongoose-delete-0.5.4.tgz"
+  "version" "0.5.4"
+
 "mongoose-slug-generator@^1.0.4":
   "integrity" "sha512-YTluRZROhrHgcncstJTJsxT4K6xR2xIGtF9a0uf4Z1mNFADBVoyanezdKgjQBxN2zfB8PH6wpU8mh4AFxL4+4w=="
   "resolved" "https://registry.npmjs.org/mongoose-slug-generator/-/mongoose-slug-generator-1.0.4.tgz"
@@ -1732,7 +1737,7 @@
     "shortid" "^2.2.4"
     "speakingurl" "^7.0.0"
 
-"mongoose@^6.6.1":
+"mongoose@^6.6.1", "mongoose@4.x || 5.x || 6.x":
   "integrity" "sha512-hPDamnn6quL9TjIrOudqUS5sMilENmP/gfxoCIb+rDmlzawtM7+MVCAWrM9930fzD20N7qAema/zE9QIDuifhQ=="
   "resolved" "https://registry.npmjs.org/mongoose/-/mongoose-6.6.1.tgz"
   "version" "6.6.1"
