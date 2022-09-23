@@ -27,7 +27,7 @@ class CourseController {
 
         course
             .save()
-            .then(() => res.redirect('/'))
+            .then(() => res.redirect('/me/stored/courses'))
             .catch((error) => {});
     }
     //[GET] /course/:id/edit
@@ -49,6 +49,18 @@ class CourseController {
     //[Delete] /course/:id
     delete(req, res, next) {
         Course.delete({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
+    //[PATCH] /course/:id/restore
+    restore(req, res, next) {
+        Course.restore({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
+    //[delete] /course/:id/force
+    forceDelete(req, res, next) {
+        Course.deleteOne({ _id: req.params.id })
             .then(() => res.redirect('back'))
             .catch(next);
     }
